@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+html{
+    font-size: 16px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1%;
+}
+
+.inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.wrapper{
+    max-width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+}
+
+.navigation{
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.4); */
+    position: fixed;
+    z-index: 5;
+    /* box-shadow:0 0 5px 0 #0094da ; */
+    padding: 30px 0;
+
+}
+
+.nav-bar{
+    align-items: center;
+    padding: 0 1%;
+}
+
+.nav-bar .blue{
+    /* color: #0094da; */
+    color: rgb(65, 64, 62);
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-bar h2{
+    color: rgb(65, 64, 62);
+    font-family: 'Playfair Display', serif;}
+
+.nav-bar ul{
+    width: 45%;
+}
+
+.nav-bar ul li{
+    list-style: none;
+    font-size: 1rem;
+}
+.nav-bar ul a{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+
+}
+
+.nav-bar ul li a:hover{
+    color: #0094da;
+    cursor: pointer;
+    border-bottom: 1px solid #0094da ;
+}
+.nav-bar .toggle-btn{
+    display: none;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    columns: #fff;
+}
+
+.banner h1{
+    font-size: 3rem;
+    color: rgb(65, 64, 62);
+    font-family: 'Playfair Display', serif;
+
+}
+
+.banner .heading{
+    font-style: italic;
+    padding: 0 20px;
+
+}
+
+.wrapper .video-container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -6;
+
+}
+.wrapper .video-container video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.video-container .color-overlay{
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 2;
+}
+.timeline-section{
+	background-color: #171716;
+	min-height: 100vh;
+	padding: 100px 15px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #85a7ce;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+/* .timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #eaa023;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+} */
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	/* background-color: #eaa023; */
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-dot img{
+    position: absolute;
+    width: 40px;
+    border-radius:50% ;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    left: -10px;
+
+}
+.timeline-date{
+	font-size: 18px;
+	color: #eaa023;
+	margin:6px 0 15px;
+}
+.timeline-content{
+    background-color: #245791;
+	padding: 30px;
+	border-radius: 5px;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+   .banner h1{
+    font-size: 2.5rem;
+   } 
+
+   .wrapper ul{
+    display: none;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+   }
+
+   .wrapper ul li{
+    padding: 20px ;
+    margin-right: 30px;
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+   }
+
+   /* .nav ul a{
+    color: black;
+   } */
+
+   .wrapper .toggle-btn{
+    display: block;
+    cursor: pointer;
+
+   }
+
+
+
+   
+}
